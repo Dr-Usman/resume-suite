@@ -26,7 +26,13 @@ jobs:
 
       - name: Compile HTML to PDF via Headless Chrome
         run: |
-          chrome --headless=new --disable-gpu --no-margins --no-pdf-header-footer \
+          chrome \
+            --headless=new \
+            --no-sandbox \
+            --disable-dev-shm-usage \
+            --disable-gpu \
+            --no-margins \
+            --no-pdf-header-footer \
             --print-to-pdf="Usman_Shahbaz_Senior_Mobile_AI_Engineer_Resume.pdf" \
             "file://$(pwd)/resume.html"
 
@@ -40,4 +46,3 @@ jobs:
         with:
           name: Usman_Shahbaz_Senior_Mobile_AI_Engineer_Resume
           path: Usman_Shahbaz_Senior_Mobile_AI_Engineer_Resume.pdf
-
