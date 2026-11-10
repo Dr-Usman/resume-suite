@@ -24,3 +24,4 @@ bash generate_pdf.sh
 ```bash
 textutil -convert docx resume.html -output Usman_Shahbaz_Senior_Mobile_AI_Engineer_Resume.docx
 ```
+
